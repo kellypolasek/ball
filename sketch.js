@@ -2,7 +2,7 @@ var ball = {
   x: 20,
   y: 200,
   size: 15,
-  speed: -5,
+  speed: 5,
 
   display: function () {
     // note that to access any of ball's properties, you must use dot notation, using the special keyword this
@@ -15,12 +15,12 @@ var ball = {
   },
 
   move: function () {
-    this.y += this.speed; // this line is the same as: this.x = this.x + 1;
+    this.x += this.speed; // this line is the same as: this.x = this.x + 1;
   },
 
   checkForBounce: function () {
-    if (this.y > height - this.size / 2) this.bounce();
-    if (this.y < 0 + this.size / 2) this.bounce();
+    if (this.x > width - this.size / 2) this.bounce();
+    if (this.x < 0 + this.size / 2) this.bounce();
   },
 
   bounce: function () {
